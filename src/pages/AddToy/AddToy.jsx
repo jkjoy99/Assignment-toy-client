@@ -4,35 +4,35 @@ import React from 'react';
 
 const AddToy = () => {
 
-const handleAddtoy = event => {
-    event.preventDefault();
+    const handleAddtoy = event => {
+        event.preventDefault();
 
-    const form = event.target;
-    const name = form.name.value;
-    const quantity = form.quantity.value;
-    const price = form.price.value;
-    const supplier = form.supplier.value;
-    const details = form.details.value;
-    const photo = form.photo.value;
-    const newToy = {name,quantity,price,supplier,details,photo};
-    console.log(newToy);
+        const form = event.target;
+        const name = form.name.value;
+        const quantity = form.quantity.value;
+        const price = form.price.value;
+        const supplier = form.supplier.value;
+        const details = form.details.value;
+        const photo = form.photo.value;
+        const newToy = { name, quantity, price, supplier, details, photo };
+        console.log(newToy);
 
-    fetch('http://localhost:5000/toy',{
-        method: 'POST',
-        headers:{
-            'content-type': 'application/json'
-        },
-        body:JSON.stringify(newToy)
-    })
-    .then(res=> res.json())
-    .then(data=>{
-        console.log(data);
-        if(data.insertedId){
-            toast.success('Toy added successfully',{position: 'top-center'})
-        }
-    })
+        fetch('http://localhost:5000/toy', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(newToy)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                if (data.insertedId) {
+                    toast.success('Toy added successfully', { position: 'top-center' })
+                }
+            })
 
-}
+    }
 
 
     return (

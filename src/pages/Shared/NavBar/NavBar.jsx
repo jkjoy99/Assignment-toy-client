@@ -8,6 +8,9 @@ const NavBar = () => {
         <li><Link to='/Alltoys'> All Toys</Link></li>
         <li><Link to='/mytoys'> My Toys</Link></li>
         <li><Link to='/blog'> Blog</Link></li>
+        <li><Link to='/login'> Login </Link></li>
+        <li><Link to='/signup'> Sign Up </Link></li>
+        
     </>
     return (
         <div className="navbar bg-indigo-200 shadow-xl rounded-lg h-28 mt-6 mb-6 ">
@@ -29,9 +32,6 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal px-1 ">
                     {navItems}
                 </ul>
-            </div>
-            <div className="navbar-end">
-                <a className="btn">Login</a>
             </div>
         </div>
     );
