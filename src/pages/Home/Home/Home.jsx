@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import ShowToys from '../ShowToys/ShowToys';
+import Test from '../Banner/Test';
 
 const Home = () => {
 
@@ -21,18 +22,7 @@ const Home = () => {
         <>
             <Banner></Banner>
             <div>
-                <h2>Show Toys product</h2>
-                {
-                    toys?.map((toy) => (
-                        <ShowToys
-                         toy={toy}
-                         key={toy._id}
-                        
-                        >
-                            
-                        </ShowToys>
-                    ))
-                }
+                <Test></Test>
 
             </div>
         </>
