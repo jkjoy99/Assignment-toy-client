@@ -1,10 +1,17 @@
 import React, { useContext } from 'react';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { FaGoogle } from "react-icons/fa";
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
+import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
+import app from '../../Firebase/firebase.config';
 
 const Login = () => {
 
     const {login} = useContext(AuthContext);
+    const googleProvider = new GoogleAuthProvider();
+    const auth = getAuth(app);
 
     const handleLogin = event => {
         event.preventDefault();
@@ -16,9 +23,28 @@ const Login = () => {
         .then(result => {
             const user = result.user;
             console.log(user);
+            if (user.providerId) {
+                toast.success('user login successfully', { position: 'top-center' })
+                form.reset();
+            }
+            
         })
         .catch(error => console.error(error));
     }
+
+    const handelGoogleLogin = () => {
+        signInWithPopup(auth, googleProvider)
+          .then((result) => {
+            const loggedUser = result.user;
+            console.log(loggedUser);
+            if (loggedUser.providerId) {
+                toast.success('user login successfully', { position: 'top-center' })
+            }
+          })
+          .catch((error) => {
+            console.error(error.message);
+          });
+      };
 
     return (
         <div className='mb-36 mx-auto bg-indigo-50 w-9/12 shadow-xl rounded-md' >
@@ -53,9 +79,20 @@ const Login = () => {
                 </div>
             </div>
 
-            <input type="submit" value="Login" className="btn mb-4 ml-80 w-80" />
+            <input type="submit" value="Login" className="btn mb-4 ml-80 w-80 text-white" />
+
+            <button
+          onClick={handelGoogleLogin}
+          className="text font-bold text-white btn mb-4 ml-80 w-80"
+        >
+          <FaGoogle className="text-2xl mr-2"></FaGoogle>
+          Login with Google
+        </button>
+
+
         </form>
         <p className='text-center pb-8'>New User <Link to="/signup" className='text-lime-600'>Sign Up</Link> </p>
+        <ToastContainer />
     </div>
     );
 };
