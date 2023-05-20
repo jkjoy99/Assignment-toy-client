@@ -1,11 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import UpdateToy from '../UpdateToy/UpdateToy';
+import Delete from '../Delete/Delete';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
     const [toys, setToys] = useState([]);
     const [searchText, setSearchText] = useState("");
+
 
 
     useEffect(() => {
@@ -26,12 +28,6 @@ const MyToys = () => {
                 setToys(data);
             });
     };
-
-
-    const handleToyUpdate=(data) =>{
-        console.log(data);
-    }
-
 
     return (
         <div className="overflow-x-auto w-full ">
@@ -79,13 +75,16 @@ const MyToys = () => {
                           
                             <th>
                                <UpdateToy
-                               key={toy._id}
-                               toy={toy}
-                               handleToyUpdate={handleToyUpdate}
+                                toy={toy}
                                ></UpdateToy>
                             </th>
                             <th>
-                                <button className="btn btn-ghost btn-xs">DELETE</button>
+                                <Delete
+                                toy={toy}
+                                toys={toys}
+                                setToys={setToys}
+                                
+                                ></Delete>
                             </th>
                         </tr>)
                     }
