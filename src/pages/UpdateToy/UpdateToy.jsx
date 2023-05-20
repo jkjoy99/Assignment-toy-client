@@ -1,53 +1,33 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 
-const AddToy = () => {
+const UpdateToy = (props) => {
     const { user } = useContext(AuthContext);
 
-    const handleAddtoy = event => {
-        event.preventDefault();
-
-        const form = event.target;
-        const name = form.name.value;
-        const quantity = form.quantity.value;
-        const price = form.price.value;
-        const supplier = form.supplier.value;
-        const details = form.details.value;
-        const photo = form.photo.value;
-        const newToy = { name, quantity, price, supplier, details, photo };
-        console.log(newToy);
-
-        fetch('http://localhost:5000/toy', {
-            method: 'POST',
-            headers: {
-                'content-type': 'application/json'
-            },
-            body: JSON.stringify(newToy)
-        })
-            .then(res => res.json())
-            .then(data => {
-                console.log(data);
-                if (data.insertedId) {
-                    toast.success('Toy added successfully', { position: 'top-center' })
-                }
-            })
-
-    }
-
-
+    const {handleToyUpdate} = props;
     return (
-        <div className='mb-36 mx-auto bg-indigo-50 w-9/12 shadow-xl rounded-md' >
-            <h2 className='text-center text-6xl text-purple-500 font-semibold pt-5'>Add Toys</h2>
-            <form onSubmit={handleAddtoy}>
+        <div>
+            {/* The button to open modal */}
+            <label htmlFor="my-modal-5" className="btn">Update</label>
+
+            {/* Put this part before </body> tag */}
+            <input type="checkbox" id="my-modal-5" className="modal-toggle" />
+            <div className="modal">
+                <div className="modal-box w-11/12 max-w-5xl">
+
+                    {/* jkfhdjkfrhuiferyfiuerhfdjfu */}
+
+
+                    <div className='mb-36 mx-auto bg-indigo-50 w-9/12 shadow-xl rounded-md' >
+            <h2 className='text-center text-6xl text-purple-500 font-semibold pt-5'>Update Toys</h2>
+            <form onSubmit={handleToyUpdate}>
                 <div>
                     <div className="form-control pt-12 md:w-full ml-64">
                         <label className="label">
                             <span className="label-text">Toy Name</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='name' placeholder="Toy Name" className="input input-bordered w-1/2" />
+                            <input type="text" name='name' defaultValue={props.toy.name} placeholder="Toy Name" className="input input-bordered w-1/2" />
                         </label>
                     </div>
                     {/*  */}
@@ -56,7 +36,7 @@ const AddToy = () => {
                             <span className="label-text">Available Quantity</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='quantity' placeholder='Quantity' className="input input-bordered w-1/2 " />
+                            <input type="text" name='quantity' defaultValue={props.toy.quantity} placeholder='Quantity' className="input input-bordered w-1/2 " />
                         </label>
                     </div>
                     {/*  */}
@@ -65,7 +45,7 @@ const AddToy = () => {
                             <span className="label-text">Toy Price</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='price' placeholder='$price' className="input input-bordered w-1/2 " />
+                            <input type="text" name='price' defaultValue={props.toy.price} placeholder='$price' className="input input-bordered w-1/2 " />
                         </label>
                     </div>
                     {/*  */}
@@ -85,7 +65,7 @@ const AddToy = () => {
                             <span className="label-text">Toy Details</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='details' placeholder="Toy Details" className="input input-bordered w-1/2 " />
+                            <input type="text" name='details' defaultValue={props.toy.details} placeholder="Toy Details" className="input input-bordered w-1/2 " />
                         </label>
                     </div>
                     {/*  */}
@@ -94,16 +74,35 @@ const AddToy = () => {
                             <span className="label-text">Toy photo url</span>
                         </label>
                         <label className="input-group">
-                            <input type="text" name='photo' placeholder="http/url" className="input input-bordered w-1/2 " />
+                            <input type="text" name='photo' defaultValue={props.toy.photo} placeholder="http/url" className="input input-bordered w-1/2 " />
+                        </label>
+                    </div>
+                    {/*  */}
+                    <div className="form-control md:w-full pb-14 ml-64 block">
+                        <label className="label">
+                            <span className="label-text"></span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name='_id' value={props?.toy?._id} className="input input-bordered w-1/2  " />
                         </label>
                     </div>
                 </div>
 
                 <input type="submit" value="Add Toys" className="btn btn-block mb-14" />
             </form>
-            <ToastContainer />
+          
+        </div>
+
+                    {/* jkfiojfioufvudjxiosudfiefie */}
+                    
+                    
+                    <div className="modal-action">
+                        <label htmlFor="my-modal-5" className="btn">OK!</label>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
 
-export default AddToy;
+export default UpdateToy;

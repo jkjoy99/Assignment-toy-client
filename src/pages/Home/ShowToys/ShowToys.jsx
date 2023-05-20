@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ShowToys = ({ toy }) => {
     const {
@@ -9,6 +10,7 @@ const ShowToys = ({ toy }) => {
         price,
         quantity,
         supplier,
+        _id
 
 
     } = toy || {}
@@ -28,7 +30,9 @@ const ShowToys = ({ toy }) => {
                     <h2 className="card-title">Toy Details : {details}</h2>
 
                     <div className="card-actions">
-                        <button className="btn btn-primary mt-4">Vew Derails</button>
+                       <Link to={`/details/${_id}`}>
+                       <button className="btn btn-primary mt-4">View Details</button>
+                       </Link>
                     </div>
                 </div>
             </div>

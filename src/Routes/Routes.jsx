@@ -6,6 +6,7 @@ import MyToys from "../pages/MyToys/MyToys";
 import AllToys from "../pages/AllToys/AllToys";
 import Login from "../pages/Login/Login";
 import SingUp from "../pages/SingUp/SingUp";
+import Details from "../pages/Details/Details";
 
 const router = createBrowserRouter([
     {
@@ -36,6 +37,11 @@ const router = createBrowserRouter([
         {
           path:"/signup",
           element:<SingUp></SingUp>
+        },
+        {
+          path:"/details/:id",
+          element: <Details></Details>,
+          loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
         }
       ]
     },
