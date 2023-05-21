@@ -11,12 +11,12 @@ const SubCatagory = () => {
   const [activeTab, setActiveTab] = useState("Imp");
 
 useEffect(()=>{
-  fetch(`http://localhost:5000/subCatagory`)
+  fetch(`http://localhost:5000/subCatagory/${activeTab}`)
         .then(res => res.json())
         .then(data => {
           setCategories(data);
         })
-},[])
+},[activeTab])
  
 // const data =categories?.filter((categore)=> categore.category==activeTab)
 // console.log(data);
