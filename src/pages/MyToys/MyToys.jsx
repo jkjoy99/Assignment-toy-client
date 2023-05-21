@@ -22,7 +22,7 @@ const MyToys = () => {
 
 
     const handleSearch = () => {
-        fetch(`http://localhost:5000/toyNameSearch/${searchText}`)
+        fetch(`https://assignment-11-toy-server.vercel.app/toyNameSearch/${searchText}`)
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
@@ -72,12 +72,6 @@ const MyToys = () => {
                             <td>{toy.name}</td>
                             <td> ${toy.price}</td>
                             <td> {toy.quantity}</td>
-                          
-                            {/* <th>
-                              <UpdateToy
-                              toy={toy}
-                              ></UpdateToy>
-                            </th> */}
                             <th>
                                <Link to={`/update/${toy._id}`}> <button>Update</button> </Link>
                             </th>

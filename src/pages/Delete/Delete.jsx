@@ -18,7 +18,7 @@ const Delete = ({ toy, setToys, toys }) => {
         }).then((result) => {
             if (result.isConfirmed) {
 
-                fetch(`http://localhost:5000/toy/${_id}`,{
+                fetch(`https://assignment-11-toy-server.vercel.app/toy/${_id}`,{
                     method: 'DELETE'
                 })
                     .then(res => res.json())

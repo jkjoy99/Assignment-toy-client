@@ -9,9 +9,7 @@ function App() {
   return (
     <>
       <h1>
-      {/* <button className="btn btn-primary">Button</button>
-<button className="btn btn-secondary">Button</button>
-<button className="btn btn-accent">Button</button> */}
+ 
       </h1>
     </>
   )

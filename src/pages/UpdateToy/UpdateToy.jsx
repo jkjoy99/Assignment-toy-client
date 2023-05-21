@@ -23,7 +23,7 @@ const UpdateToy = () => {
         const newToy = { name, quantity, price, supplier, details, photo };
         console.log(newToy);
 
-        fetch(`http://localhost:5000/toy/${_id}`, {
+        fetch(`https://assignment-11-toy-server.vercel.app/toy/${_id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
