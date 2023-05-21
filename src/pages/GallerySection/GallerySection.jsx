@@ -7,9 +7,7 @@ const GallerySection = ({ toy }) => {
             <div className="card card-compact w-96 bg-base-100">
                 <figure className='w-full h-96 '><img src={toy.image} alt="Shoes" /></figure>
             </div>
-            <p>have a nice product</p>
-            <p>efs</p>
-            <p>he</p>
+         
 
         </div>
     );
