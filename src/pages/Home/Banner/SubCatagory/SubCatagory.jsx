@@ -63,11 +63,6 @@ const handleTabClick = (category) => {
           ))
         }
        </div>
-
-        <TabPanel>
-          <h2>hello</h2>
-        </TabPanel>
-        
       </Tabs>
     </div>
   );
