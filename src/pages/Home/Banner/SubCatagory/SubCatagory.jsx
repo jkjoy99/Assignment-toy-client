@@ -1,8 +1,8 @@
 
 import React, { useEffect, useState } from 'react';
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import { Tab, Tabs, TabList, } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import { Link } from 'react-router-dom';
+
 
 
 
@@ -53,9 +53,6 @@ const SubCatagory = () => {
                     <h2 className="card-title">Toy Rating : {categore.rating}</h2>
 
                     <div className="card-actions">
-                      <Link to={`/details/${categore._id}`}>
-                        <button className="btn btn-primary mt-4">View Details</button>
-                      </Link>
                     </div>
                   </div>
                 </div>
