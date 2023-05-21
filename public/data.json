@@ -1,0 +1,82 @@
+[
+    {
+      "name": "Robot Friend",
+      "image": "https://img.freepik.com/free-vector/children-fixing-robot-together-room-scene_1308-80898.jpg?w=740&t=st=1684656596~exp=1684657196~hmac=f9df2ce73a0095f6cf147a70d8338711ed2205ccfc3af3a766215a7c4eeeb0dd",
+      "rating": 3.7,
+      "quantity": 42,
+      "category": "Eng Tools",
+      "price": 23.99,
+      "details": "This interactive robot toy can talk, walk, and dance. It has LED lights and comes with a remote control."
+    },
+    {
+      "name": "Architecture",
+      "image": "https://img.freepik.com/free-photo/boy-wearing-engineer-hat-house-plan-blackboard_1150-19708.jpg?w=740&t=st=1684656666~exp=1684657266~hmac=0d99c40fb9e3d63c54da345fd680cbd4ff2d7320e464da98a8b76fe0148664c0",
+      "rating": 4.2,
+      "quantity": 71,
+      "category": "Architecture",
+      "price": 15.75,
+      "details": "This sleek remote-controlled car features realistic sound effects, working headlights, and fast speed."
+    },
+    {
+      "name": "Implement",
+      "image": "https://img.freepik.com/free-vector/girl-fixing-toy-car-together-white-background_1308-78091.jpg?w=740&t=st=1684657175~exp=1684657775~hmac=22a0862aea495e5dc5f73516a2b0f34eb522bb4d416dcb7ee7103e443cd7b110",
+      "rating": 2.9,
+      "quantity": 18,
+      "category": "Implement",
+      "price": 10.5,
+      "details": "This beautiful fairy doll has a magical wand and wings that light up. Perfect for imaginative play."
+    },
+    {
+      "name": "Magic Castle",
+      "image": "https://img.freepik.com/free-vector/children-fixing-robot-together_1308-77993.jpg?w=740&t=st=1684657121~exp=1684657721~hmac=d502b1b98f3608c260fc489d12db3216dcd2c223d34c01a946fe95f9b4492de9",
+      "rating": 4.8,
+      "quantity": 90,
+      "category": "Implement",
+      "price": 32.15,
+      "details": "This inflatable castle provides hours of fun for kids. It's easy to set up and comes with a repair kit."
+    },
+    {
+      "name": "Pirate Ship",
+      "image": "https://img.freepik.com/free-vector/architect-foreman-with-house-construction-project-wooden-desk_1284-32518.jpg?w=740&t=st=1684656730~exp=1684657330~hmac=1d54407abcd56777574fd495e308366cc8f0f2d3aa647033e0df3e66cfb547ef",
+      "rating": 3.4,
+      "quantity": 5,
+      "category": "Architecture",
+      "price": 17.99,
+      "details": "This plush pirate ship features a crew of cute pirate animals. It has a hidden treasure chest and makes sound effects."
+    },
+    {
+      "name": "Space Explorer",
+      "image": "https://img.freepik.com/free-vector/christmas-background-design_1262-558.jpg?w=740&t=st=1684656943~exp=1684657543~hmac=6457861c6684527ef5d62d5404b4f7203bd819f0b25726d79096c3b534bde650",
+      "rating": 4.1,
+      "quantity": 63,
+      "category": "Eng Tools",
+      "price": 29.5,
+      "details": "This educational toy lets kids explore the solar system. It comes with a planetarium guide and interactive quizzes."
+    },
+    {
+      "name": "Architecture",
+      "image": "https://img.freepik.com/free-photo/girl-using-magnifier-look-electrical-components_23-2148761935.jpg?w=740&t=st=1684656857~exp=1684657457~hmac=a843f98af6802cceafb8dadcbd1d1ace80e41999251cac1e8f6c86a0507e9678",
+      "rating": 4.5,
+      "quantity": 27,
+      "category": "Architecture",
+      "price": 11.85,
+      "details": "This set of building blocks allows kids to create their own dinosaur-themed adventure park. It includes various dinosaur figures and accessories."
+    },
+    {
+      "name": "Tools",
+      "image": "https://img.freepik.com/free-vector/collection-flat-construction-equipment_23-2148196009.jpg?w=740&t=st=1684657025~exp=1684657625~hmac=149bfc47d500e62f49698befae43cc0215a9529b9e1f22e0e7b0018b4c9c4fda",
+      "rating": 2.3,
+      "quantity": 38,
+      "category": "Eng Tools",
+      "price": 21.75,
+      "details": "This cuddly teddy bear is made of soft, high-quality material. It's perfect for hugging and bedtime companionship."
+    },
+    {
+      "name": "Unicorn Princess",
+      "image": "https://img.freepik.com/free-vector/children-repairing-plane-together_1308-77630.jpg?w=996&t=st=1684657088~exp=1684657688~hmac=6f1562145f0a9ad6d633199cb06171677feca65fff724bd918a2136abd445a91",
+      "rating": 3.9,
+      "quantity": 10,
+      "category": "Implement",
+      "details": "This cuddly teddy bear is made of soft, high-quality material. It's perfect for hugging and bedtime companionship."
+      }]
+  

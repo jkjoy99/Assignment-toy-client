@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import UpdateToy from '../UpdateToy/UpdateToy';
 import Delete from '../Delete/Delete';
+import { Link } from 'react-router-dom';
 
 const MyToys = () => {
     const { user } = useContext(AuthContext);
@@ -48,7 +49,6 @@ const MyToys = () => {
                         <th>Price</th>
                         <th>Quantity </th>
                         <th>Details </th>
-                        <th>Updated</th>
                         <th>Delete</th>
                     </tr>
                 </thead>
@@ -73,10 +73,13 @@ const MyToys = () => {
                             <td> ${toy.price}</td>
                             <td> {toy.quantity}</td>
                           
+                            {/* <th>
+                              <UpdateToy
+                              toy={toy}
+                              ></UpdateToy>
+                            </th> */}
                             <th>
-                               <UpdateToy
-                                toy={toy}
-                               ></UpdateToy>
+                               <Link to={`/update/${toy._id}`}> <button>Update</button> </Link>
                             </th>
                             <th>
                                 <Delete

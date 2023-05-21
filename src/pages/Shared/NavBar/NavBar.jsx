@@ -46,7 +46,7 @@ const NavBar = () => {
                     {navItems}
                     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
               <div className="w-12 mr-2 rounded-full">
-                {user ? <img src={user.photoURL} /> : ""}
+                {user ? <img className='' src={user.photoURL} /> : ""}
               </div>
             </label>
             {user ? (

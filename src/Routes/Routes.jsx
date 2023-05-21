@@ -9,6 +9,7 @@ import SingUp from "../pages/SingUp/SingUp";
 import Details from "../pages/Details/Details";
 import PrivateRoute from "./PrivateRoute";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
+import Blog from "../pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,15 @@ const router = createBrowserRouter([
           path:"/details/:id",
           element: <PrivateRoute><Details></Details></PrivateRoute>,
           loader: ({params}) => fetch(`http://localhost:5000/details/${params.id}`)
+        },
+        {
+          path:"/update/:id",
+          element:<UpdateToy></UpdateToy>,
+          loader:({params}) => fetch(`http://localhost:5000/toy/${params.id}`)
+        },
+        {
+          path:'/blog',
+          element:<Blog></Blog>
         }
       
       ]

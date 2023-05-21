@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FaGoogle } from "react-icons/fa";
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
@@ -12,6 +12,10 @@ const Login = () => {
     const {login} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth(app);
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/'
 
     const handleLogin = event => {
         event.preventDefault();
@@ -26,6 +30,7 @@ const Login = () => {
             if (user.providerId) {
                 toast.success('user login successfully', { position: 'top-center' })
                 form.reset();
+                navigate(from, {replace: true})
             }
             
         })
@@ -39,6 +44,7 @@ const Login = () => {
             console.log(loggedUser);
             if (loggedUser.providerId) {
                 toast.success('user login successfully', { position: 'top-center' })
+                navigate(from, {replace: true})
             }
           })
           .catch((error) => {

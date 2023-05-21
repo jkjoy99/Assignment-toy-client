@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import ShowToys from '../ShowToys/ShowToys';
-import Test from '../Banner/Test';
+import SubCatagory from '../Banner/SubCatagory/SubCatagory';
 
 const Home = () => {
 
@@ -22,7 +22,7 @@ const Home = () => {
         <>
             <Banner></Banner>
             <div>
-                <Test></Test>
+                <SubCatagory></SubCatagory>
 
             </div>
         </>
