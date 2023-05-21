@@ -10,6 +10,7 @@ import Details from "../pages/Details/Details";
 import PrivateRoute from "./PrivateRoute";
 import UpdateToy from "../pages/UpdateToy/UpdateToy";
 import Blog from "../pages/Blog/Blog";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
@@ -54,10 +55,15 @@ const router = createBrowserRouter([
         {
           path:'/blog',
           element:<Blog></Blog>
-        }
+        },
+
       
       ]
     },
+    {
+      path:'*',
+      element:<ErrorPage></ErrorPage>
+    }
   ]);
 
   export default router
