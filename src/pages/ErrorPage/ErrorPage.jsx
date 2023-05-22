@@ -1,8 +1,10 @@
 import React from "react";
 import "./ErrorPage.css";
 import { Link } from "react-router-dom";
+import webTitle from '../WebTitle/WebTitle';
 
 const ErrorPage = () => {
+  webTitle('Error')
   return (
     <div className="bg">
       <img

@@ -2,9 +2,12 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
+import webTitle from '../WebTitle/WebTitle';
+
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
+    webTitle('AddToy')
 
     const handleAddtoy = event => {
         event.preventDefault();
@@ -14,9 +17,10 @@ const AddToy = () => {
         const quantity = form.quantity.value;
         const price = form.price.value;
         const supplier = form.supplier.value;
+        const category = form.category.value;
         const details = form.details.value;
         const photo = form.photo.value;
-        const newToy = { name, quantity, price, supplier, details, photo };
+        const newToy = { name, quantity, category, price, supplier, details, photo };
         console.log(newToy);
 
         fetch('https://assignment-11-toy-server.vercel.app/toy', {
@@ -79,7 +83,17 @@ const AddToy = () => {
                             placeholder="Your email @" className="input input-bordered w-1/2 " />
                         </label>
                     </div>
-                    {/*  */}
+                    
+                    <div className="form-control md:w-full ml-64">
+                        <label className="label">
+                            <span className="label-text">category</span>
+                        </label>
+                        <label className="input-group">
+                            <input type="text" name='category' required
+                            placeholder="Implement /EngTools / Architecture" className="input input-bordered w-1/2 " />
+                        </label>
+                    </div>
+                    
                     <div className="form-control md:w-full ml-64">
                         <label className="label">
                             <span className="label-text">Toy Details</span>

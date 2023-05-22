@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaStarHalfAlt } from "react-icons/fa";
+import webTitle from '../WebTitle/WebTitle';
 
 const Details = () => {
+    webTitle('Details')
     const detail =useLoaderData();
     const  {
         name,

@@ -1,8 +1,10 @@
 import React from 'react';
 import Swal from 'sweetalert2';
+import webTitle from '../WebTitle/WebTitle';
 
 const Delete = ({ toy, setToys, toys }) => {
-
+    
+    webTitle('Delete')
     const { _id } = toy
 
     const handleToyDelete = _id => {

@@ -10,7 +10,7 @@ const Home = () => {
 
 
     useEffect(() => {
-        fetch('data.json')
+        fetch('https://assignment-11-toy-server.vercel.app/category')
             .then(res => res.json())
             .then(data => {
                 setToys(data)

@@ -6,9 +6,11 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import { GoogleAuthProvider, getAuth, signInWithPopup } from 'firebase/auth';
 import app from '../../Firebase/firebase.config';
+import webTitle from '../WebTitle/WebTitle';
 
 const Login = () => {
-
+    
+    webTitle('Login')
     const {login} = useContext(AuthContext);
     const googleProvider = new GoogleAuthProvider();
     const auth = getAuth(app);

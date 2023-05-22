@@ -1,6 +1,8 @@
-import React from 'react';
+import React from 'react';import webTitle from '../WebTitle/WebTitle';
+
 
 const Blog = () => {
+    webTitle('Blog')
     return (
         <div className='bg-slate-400 rounded-lg shadow-xl '>
             <div className='text-white text-xl p-10 '>

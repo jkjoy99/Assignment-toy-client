@@ -1,9 +1,12 @@
 import React, { useContext } from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate, useNavigation } from 'react-router-dom';
 import { AuthContext } from '../../providers/AuthProvider';
 import Swal from 'sweetalert2';
+import webTitle from '../WebTitle/WebTitle';
 
 const UpdateToy = () => {
+    const navigate = useNavigate()
+    webTitle('updateToy')
 
     const { user } = useContext(AuthContext);
 
@@ -41,6 +44,8 @@ const UpdateToy = () => {
                         confirmButtonText: 'ok'
                       })
                 }
+
+                navigate('/mytoys')
             })
 
     }

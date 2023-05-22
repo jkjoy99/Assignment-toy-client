@@ -1,12 +1,14 @@
 import React from 'react';
 import { FaFacebookSquare, FaGoogle, FaPhoneAlt, FaUserCircle, } from 'react-icons/fa';
+import webTitle from '../../WebTitle/WebTitle';
 
 const Footer = () => {
+    webTitle('home')
     return (
         <div>
             <footer className="footer p-10  bg-neutral text-neutral-content shadow-xl rounded-xl mt-80">
                 <div>
-                    <img className='rounded-full w-16 h-16 ml-4 bg-yellow-300' src="https://cdn-icons-png.flaticon.com/512/1129/1129120.png?w=740&t=st=1684430953~exp=1684431553~hmac=486a260954692ef0703b86181da1c49f8f076e53ff4e252a572a166cd83164a6" alt="" />
+                    <img className='rounded-full w-16 h-16 ml-4 bg-yellow-300' src="https://img.freepik.com/free-vector/stem-education-logo-banner-white-background_1308-58367.jpg?w=996&t=st=1684747400~exp=1684748000~hmac=66f2a9260c2d182afb696b47725e4320882e8ab6206f60195ee7aa984d6ff948" alt="" />
                     <p>Toy Engineering Tools<br />Website reels 2023.<br/>Web Dataloader @Joy</p>
                 </div>
                 <div>
