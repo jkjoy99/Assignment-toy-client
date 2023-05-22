@@ -59,7 +59,7 @@ const Login = () => {
         <h2 className='text-center text-6xl text-purple-500 font-semibold pt-5'>Place Login</h2>
         <form onSubmit={handleLogin}>
             <div>
-                <div className="form-control pt-12 md:w-full ml-64">
+                <div className="form-control pt-12 md:w-full ml-64" data-aos="fade-up">
                     <label className="label">
                         <span className="label-text">Email</span>
                     </label>
