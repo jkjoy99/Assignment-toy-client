@@ -1,12 +1,14 @@
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+
 import React, { useContext } from 'react';
 import { AuthContext } from '../../providers/AuthProvider';
 import webTitle from '../WebTitle/WebTitle';
+import { useNavigate } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 
 const AddToy = () => {
     const { user } = useContext(AuthContext);
+    const navigate = useNavigate()
     webTitle('AddToy')
 
     const handleAddtoy = event => {
@@ -21,7 +23,7 @@ const AddToy = () => {
         const details = form.details.value;
         const photo = form.photo.value;
         const newToy = { name, quantity, category, price, supplier, details, photo };
-        console.log(newToy);
+      
 
         fetch('https://assignment-11-toy-server.vercel.app/toy', {
             method: 'POST',
@@ -34,8 +36,16 @@ const AddToy = () => {
             .then(data => {
                 console.log(data);
                 if (data.insertedId) {
-                    toast.success('Toy added successfully', { position: 'top-center' })
+                    Swal.fire({
+                        title: 'Success',
+                        text: ' Updated Toy Successfully',
+                        icon: 'success',
+                        confirmButtonText: 'ok'
+                      })
                 }
+
+                navigate('/alltoys')
+
             })
 
     }
@@ -115,7 +125,6 @@ const AddToy = () => {
 
                 <input type="submit" value="Add Toys" className="btn btn-block mb-14" />
             </form>
-            <ToastContainer />
         </div>
     );
 };

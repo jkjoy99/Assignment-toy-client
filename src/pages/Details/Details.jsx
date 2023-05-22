@@ -13,7 +13,8 @@ const Details = () => {
         price,
         quantity,
         supplier,
-        _id
+        _id,
+        category
 
 
     } = detail || {}
@@ -28,6 +29,7 @@ const Details = () => {
             <p className='card-title'>Price :${price}</p>
             <h2 className="card-title">Toy Quantity : {quantity}</h2>
             <h2 className="card-title">Toy supplier : {supplier}</h2>
+            <h2 className="card-title">Toy Category : {category}</h2>
             <h2 className="card-title">Toy Details : {details}</h2>
             <h2 className="card-title ">Rating: <FaStar/> <FaStar/> <FaStarHalfAlt/>  <FaStarHalfAlt/> </h2>
 
